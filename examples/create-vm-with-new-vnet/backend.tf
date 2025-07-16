@@ -14,8 +14,8 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 
-terraform {
-  backend "azurerm" {
-    key = "vm_with_new_vnet_terraform.tfstate"
-  }
-}
+# terraform {
+#   backend "azurerm" {
+#     key = "vm_with_new_vnet_terraform.tfstate"
+#   }
+# }

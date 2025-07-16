@@ -187,6 +187,7 @@ virtual_machines_psn = {
     services : "Session, Profiler, SXP, DeviceAdmin"
     size : "Standard_D4s_v4"
     storage : 500
+    enable_nlb : false
   }
 
   ise-psn-node-02 : {
