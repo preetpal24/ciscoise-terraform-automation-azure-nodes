@@ -6,7 +6,7 @@ tertiarynameserver=${tertiarynameserver}%{ endif }
 primaryntpserver=${ntpserver}%{ if secondaryntpserver != "" }
 secondaryntpserver=${secondaryntpserver}%{ endif }%{ if tertiaryntpserver != "" }
 tertiaryntpserver=${tertiaryntpserver}%{ endif }%{ if timezone != "" }
-timezone=${timezone}%{ endif }%{ if username != "" }
+timezone=${timezone}%{ endif }%{ if password != "" }
 password=${password}%{ endif }%{ if ersapi != "" }
 ersapi=${ersapi}%{ endif }%{ if openapi != "" }
 openapi=${openapi}%{ endif }%{ if pxGrid != "" }
