@@ -69,18 +69,13 @@ primarynameserver = "168.63.129.16"   # Enter the IP address of the primary name
 dnsdomain         = "example.com"     # Enter the FQDN of the DNS domain. The entry can contain ASCII characters, numerals, hyphens (-), and periods (.).
 ntpserver         = "time.google.com" # Enter the IPv4 address or FQDN of the NTP server that must be used for synchronization, for example, time.nist.gov.
 
-# primarynameserver = "169.254.169.253" # Enter the IP address of the primary name server. Only IPv4 addresses are supported.
-secondarynameserver="169.254.169.252"
-tertiarynameserver="169.254.169.251"
-# ntpserver         = "169.254.169.123" # Enter the IPv4 address or FQDN of the NTP server that must be used for synchronization.
-secondaryntpserver="169.254.169.124"
-tertiaryntpserver="169.254.169.125"
 # Optional secondary and tertiary DNS/NTP servers (only used for ISE 3.4+)
-# Uncomment and set values if you want to use secondary/tertiary servers
-# secondarynameserver = "172.31.31.255"  # Enter the IP address of the secondary name server (optional)
-# tertiarynameserver  = "172.31.31.256"  # Enter the IP address of the tertiary name server (optional)
-# secondaryntpserver  = "169.254.169.124" # Enter the IPv4 address or FQDN of the secondary NTP server (optional)
-# tertiaryntpserver   = "169.254.169.125" # Enter the IPv4 address or FQDN of the tertiary NTP server (optional)
+# primarynameserver = "168.63.129.16" # Enter the IP address of the primary name server. Only IPv4 addresses are supported.
+secondarynameserver="168.63.129.16" 
+tertiarynameserver="168.63.129.16" 
+# ntpserver         = "time.google.com" # Enter the IPv4 address or FQDN of the NTP server that must be used for synchronization.
+secondaryntpserver="time1.google.com"
+tertiaryntpserver="time2.google.com"
 
 
 timezone          = "UTC"             # Enter a timezone that is allowed by ISE nodes. For information on the supported timezone formats, refer to this documentation - https://www.cisco.com/c/en/us/td/docs/security/ise/3-3/cli_guide/b_ise_CLI_Reference_Guide_33/b_ise_CLIReferenceGuide_33_chapter_011.html?#wp2884933107
@@ -204,24 +199,24 @@ virtual_machines_psn = {
     storage : 500
   }
 
-  ise-psn-node-02 : {
-    roles : "PrimaryDedicatedMonitoring"
-    services : "PassiveIdentity, pxGrid, pxGridCloud"
-    size : "Standard_D4s_v4"
-    storage : 550
-  }
+  # ise-psn-node-02 : {
+  #   roles : "PrimaryDedicatedMonitoring"
+  #   services : "PassiveIdentity, pxGrid, pxGridCloud"
+  #   size : "Standard_D4s_v4"
+  #   storage : 550
+  # }
 
-  ise-psn-node-03 : {
-    size : "Standard_D4s_v4"
-    services : "PassiveIdentity, pxGrid"
-    storage : 600
-  }
+  # ise-psn-node-03 : {
+  #   size : "Standard_D4s_v4"
+  #   services : "PassiveIdentity, pxGrid"
+  #   storage : 600
+  # }
 
-  ise-psn-node-test : {
-    services : "Session, Profiler"
-    size : "Standard_D4s_v4"
-    storage : 500
-  }
+  # ise-psn-node-test : {
+  #   services : "Session, Profiler"
+  #   size : "Standard_D4s_v4"
+  #   storage : 500
+  # }
 }
 
 # virtual_machines_psn = {
